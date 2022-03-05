@@ -10,6 +10,15 @@
       href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
       rel="stylesheet"
     />
+    <style>
+      #linhaEnder {
+        height: 50px;
+      }
+      #inpEnder {
+        width: 394px;
+        height: 80px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -43,6 +52,65 @@
         </li>
       </ul>
     </nav>
-    <section></section>
+    <section>
+      <form class="FormBox">
+        <h2>Cadastro</h2>
+        <fieldset class="FSLinhaInteira">
+          <legend>Identificação</legend>
+          <div class="LinhaForm">
+            <label class="LabBox">E-mail:</label>
+            <input class="InpBoxGnd" type="text" />
+          </div>
+          <div class="ColEsq">
+            <label>Senha:</label>
+            <input class="InpBoxMed" type="password" />
+          </div>
+          <div class="ColDir">
+            <label>Confirme:</label>
+            <input class="InpBoxMed" type="password" />
+          </div>
+        </fieldset>
+        <fieldset class="FSLinhaInteira">
+          <legend>Dados Pessoais</legend>
+          <div class="LinhaForm">
+            <label class="LabBox">Nome:</label>
+            <input class="InpBoxGnd" type="text" />
+          </div>
+          <div id="linhaEnder" class="LinhaForm">
+            <label class="LabBox">Endereço:</label>
+            <textarea id="inpEnder" class="InpBoxGnd"></textarea>
+          </div>
+          <div class="ColEsq">
+            <label>Telefone:</label>
+            <input class="InpBoxMed" type="text" />
+          </div>
+          <div class="ColDir">
+            <label>Celular:</label>
+            <input class="InpBoxMed" type="text" />
+          </div>
+          <fieldset class="FSColEsq">
+            <legend>Nascimento:</legend>
+            <input class="numDD" min="1" max="31" type="number" />
+            <label>/</label>
+            <input class="numDD" min="1" max="12" type="number" />
+            <label>/</label>
+            <input class="numQD" min="1900" max="2022" type="number" />
+          </fieldset>
+          <fieldset class="FSColDir">
+            <legend>Sexo:</legend>
+            <input type="radio" id="Choice1" name="Sexo" value="mas" />
+            <label for="Choice1">Mas</label>
+            <input type="radio" id="Choice2" name="Sexo" value="fem" />
+            <label for="Choice2">Fem</label>
+            <input type="radio" id="Choice3" name="Sexo" value="outro" />
+            <label for="Choice3">Outro</label>
+          </fieldset>
+        </fieldset>
+        <div class="botoes">
+          <button>Cadastrar</button>
+          <button>Limpar</button>
+        </div>
+      </form>
+    </section>
   </body>
 </html>
