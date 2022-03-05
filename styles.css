@@ -141,13 +141,15 @@ th {
 }
 .FSColEsq {
   width: 210px;
-  text-align: center;
   float: left;
 }
 .FSColDir {
   width: 210px;
-  text-align: center;
   float: right;
+}
+.FSColDir div,
+.FSColEsq div {
+  text-align: center;
 }
 fieldset .LinhaForm {
   margin: 0px;
