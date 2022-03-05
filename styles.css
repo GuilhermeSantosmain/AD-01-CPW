@@ -86,3 +86,42 @@ nav ul {
   color: #114455;
   list-style-type: disc;
 }
+.tabDisco {
+  /* font-family: ; */
+  border: thin solid;
+  border-collapse: collapse;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff;
+  color: #006;
+  font-size: 14px;
+}
+.tabDisco td,
+th {
+  border: 3px solid #269;
+  padding: 6px 12px 6px 12px;
+}
+.tabDisco .titulo {
+  color: #ff0;
+  background-color: #295;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+}
+.tabDisco .linTH {
+  color: #fff;
+  background-color: #2b6;
+  vertical-align: middle;
+  text-align: center;
+}
+.tabDisco .colTH {
+  color: #fff;
+  background-color: #29d;
+  text-align: left;
+}
+.tabDisco .imgDisco {
+  width: 70px;
+  height: 70px;
+}
