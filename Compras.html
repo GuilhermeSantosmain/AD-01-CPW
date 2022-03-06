@@ -10,6 +10,60 @@
       href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
       rel="stylesheet"
     />
+    <style>
+      #loginCad {
+        width: 260px;
+      }
+      #idEmail {
+        width: 160px;
+        margin-bottom: 5px;
+      }
+      #senhaCad {
+        width: 180px;
+      }
+      #lisSelProd {
+        width: 370px;
+      }
+      #selProduto {
+        width: 75%;
+        margin-bottom: 5px;
+      }
+      #btnIncluir {
+        width: 70px;
+      }
+      #boxPedidos {
+        height: 100px;
+      }
+      #lisPedArea {
+        height: 90%;
+        width: 100%;
+      }
+      #boxValor {
+        margin-top: 5px;
+      }
+      #fsBandeira {
+        height: 80px;
+        text-align: left;
+        width: 70px;
+      }
+      #numCartao {
+        width: 350px;
+        height: 35px;
+        padding-top: 10px;
+      }
+      #numCartao .inputSmall {
+        width: 50px;
+        margin-right: 3px;
+      }
+      #valCartao {
+        width: 230px;
+        height: 35px;
+      }
+      #boxParcel {
+        width: 230px;
+        height: 30px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -43,6 +97,109 @@
         </li>
       </ul>
     </nav>
-    <section></section>
+    <section>
+      <form class="FormBox">
+        <h2>Compras</h2>
+        <fieldset class="FSLinhaInteira">
+          <legend>Identificação</legend>
+          <div id="loginCad" class="ColEsq">
+            <label class="LabBox">E-mail:</label>
+            <input id="idEmail" class="InpBoxGnd" type="text" />
+          </div>
+          <div id="senhaCad" class="ColDir">
+            <label>Senha:</label>
+            <input class="InpBoxMed" type="password" />
+          </div>
+          <div id="lisSelProd" class="ColEsq">
+            <label
+              >Se você ainda não tem cadastro clique
+              <a href="./Cadastro.html">aqui</a>!</label
+            >
+          </div>
+        </fieldset>
+        <fieldset class="FSLinhaInteira">
+          <legend>Lista de Compras</legend>
+          <div id="lisSelProd" class="ColEsq">
+            <label class="LabBox">Produtos:</label>
+            <select id="selProduto" class="InpBoxGnd">
+              <option>-----</option>
+              <optgroup label="Memória DDR3">
+                <option>Kingston 4Gb</option>
+
+                <option>Samsung 8Gb</option>
+              </optgroup>
+
+              <optgroup label="Memória DDR4">
+                <option>Kingston Fury 8Gb</option>
+
+                <option>Carsair Vengeance 8GB</option>
+              </optgroup>
+
+              <optgroup label="HD Sata |||">
+                <option>Wester Digital 500Gb</option>
+
+                <option>Seagate 1Tb</option>
+              </optgroup>
+
+              <optgroup label="SSD Sata |||">
+                <option>Samdisk 480Gb</option>
+
+                <option>Kingston 960Gb</option>
+              </optgroup>
+
+              <optgroup label="SSD M2">
+                <option>Kingston 500Gb</option>
+
+                <option>Samsung 240Gb</option>
+              </optgroup>
+            </select>
+          </div>
+          <button id="btnIncluir" class="ColDir">Incluir</button>
+          <div id="boxPedidos" class="LinhaForm">
+            <textarea id="lisPedArea" class="InpBoxGnd"></textarea>
+          </div>
+          <div id="boxValor" class="ColDir">
+            <label>Valor: R$</label>
+            <input class="InpBoxMed" type="number" />
+          </div>
+        </fieldset>
+        <fieldset class="FSLinhaInteira">
+          <legend>Dados do Cartão</legend>
+          <div class="ColEsq">
+            <div id="numCartao">
+              <label class="LabBox">Número:</label>
+              <input class="inputSmall" type="number" min="0000" max="9999" />
+              <input class="inputSmall" type="number" min="0000" max="9999" />
+              <input class="inputSmall" type="number" min="0000" max="9999" />
+              <input class="inputSmall" type="number" min="0000" max="9999" />
+            </div>
+            <div id="valCartao">
+              <label class="LabBox">Validade:</label>
+              <input class="numDD" min="1" max="12" type="number" />
+              <label>/</label>
+              <input class="numQD" min="2022" max="2202" type="number" />
+            </div>
+            <div id="boxParcel">
+              <label class="LabBox">Parcelas:</label>
+              <input class="numDD" min="1" max="18" type="number" />
+              <label>x Sem Juros</label>
+            </div>
+          </div>
+          <fieldset id="fsBandeira" class="FSColDir">
+            <legend>Bandeira:</legend>
+            <input type="radio" name="bandeira bancaria" value="visa" />
+            <label for="Choice1">Visa</label>
+            <input type="radio" name="bandeira bancaria" value="master" />
+            <label for="Choice2">Master</label>
+            <input type="radio" name="bandeira bancaria" value="elo" />
+            <label for="Choice3">Elo</label>
+          </fieldset>
+        </fieldset>
+        <div class="botoes">
+          <button>Cadastrar</button>
+          <button>Limpar</button>
+        </div>
+      </form>
+    </section>
   </body>
 </html>
