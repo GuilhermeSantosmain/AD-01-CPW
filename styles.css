@@ -96,11 +96,15 @@ nav ul {
   background-color: #fff;
   color: #006;
   font-size: 14px;
+  font-weight: bold;
 }
 .tabDisco td,
 th {
   border: 3px solid #269;
   padding: 6px 12px 6px 12px;
+}
+.tabDisco .valor {
+  color: #e00;
 }
 .tabDisco .titulo {
   color: #ff0;
