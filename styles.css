@@ -10,8 +10,6 @@ header {
   display: block;
   margin-bottom: 1px;
 }
-address {
-}
 nav {
   font-family: "Rubik", Verdana, sans-serif;
   margin-right: 10px;
@@ -62,7 +60,6 @@ nav ul {
 }
 .preco {
   color: #e00;
-  font-weight: bold;
   vertical-align: middle;
 }
 .listMemo {
