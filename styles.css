@@ -22,11 +22,11 @@ section {
   width: 70%;
   float: right;
 }
-a {
+nav a, address a {
   text-decoration: none;
   color: #ff2;
 }
-a:visited {
+nav a:visited {
   text-decoration: none;
   color: #dd2;
 }
@@ -75,12 +75,13 @@ nav ul {
   list-style-type: decimal;
 }
 .listMemo li::marker {
-  font-size: 24px;
   font-weight: bold;
 }
-.listMemo ul {
-  color: #145;
-  list-style-type: disc;
+.listMemo a, a:visited {
+  text-decoration: none;
+  color: #059;
+  cursor: pointer;
+  font-weight: bold;
 }
 .tabDisco {
   font-family: "Rubik", Verdana, sans-serif;
@@ -190,4 +191,12 @@ fieldset .numDD {
 }
 fieldset .numQD {
   width: 50px;
+}
+.janInfoDetalhe {
+text-align: left;
+font-size: 18px;
+margin-left: 15px;
+}
+.center {
+  text-align: center;
 }
