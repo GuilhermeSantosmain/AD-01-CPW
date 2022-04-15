@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AD 1</title>
+    <title>PakiMemo</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -42,45 +42,43 @@
     <section>
       <h2 class="Titulo">Memórias</h2>
       <ul class="listMemo">
-            <li><a target="_self" href="javascript:MostraMat(0);">DDR3 Kingston 4Gb</a></li>
-            <li><a target="_self" href="javascript:MostraMat(1);">DDR3 Samsung 8Gb</a></li>
-            <li><a target="_self" href="javascript:MostraMat(2);">DDR4 Kingston Fury 8Gb</a></li>
-            <li><a target="_self" href="javascript:MostraMat(3);">DDR4 Corsair Vengeance 8GB</a></li>
+            <li><a target="_self" href="javascript:mostrarMemoria(0);">DDR3 Kingston 4Gb</a></li>
+            <li><a target="_self" href="javascript:mostrarMemoria(1);">DDR3 Samsung 8Gb</a></li>
+            <li><a target="_self" href="javascript:mostrarMemoria(2);">DDR4 Kingston Fury 8Gb</a></li>
+            <li><a target="_self" href="javascript:mostrarMemoria(3);">DDR4 Corsair Vengeance 8GB</a></li>
       </ul>
     </section>
 
     <script>
-
       var listaMemorias = new Array(4);
 
       listaMemorias[0] = [ "DDR3", "Mem_Kingston_4gb_200", "Kingston", 4, 200];      
-      listaMemorias[1] = [ "DDR3","Mem_Samsung_8g_200", "Samsung", 8, 190];      
+      listaMemorias[1] = [ "DDR3", "Mem_Samsung_8g_200", "Samsung", 8, 190];      
       listaMemorias[2] = [ "DDR4", "Mem_Fury_8gb_200", "Kingston Fury", 8, 298];      
       listaMemorias[3] = [ "DDR4", "Mem_Corsair_8gb_200", "Corsair Vengeance", 8, 245];
 
-      function MostraMat(tipo) {
-      var jan = open("", listaMemorias[tipo][0],
-      "width=300,height=450");
-      
-      with (jan.document) {
-      write("<!DOCTYPE html>");
-      write("<html>");
-      write("<head><title>Paki Memo</title>");
-      write("<link rel='stylesheet' href='./styles.css' />");        
-      write("</head>");
-      write("<body>");
-      write("<div class='Titulo'><h2>Tipo ", listaMemorias[tipo][0],"</h2></div>");
-      write("<div class='Titulo'><img src='Imagens/",
-      listaMemorias[tipo][1], ".jpg' /></div>");
-      write("<div class='janInfoDetalhe'>");
-      write("<div><p>Fabricante: ", listaMemorias[tipo][2], "</p>" );
-      write("<p>Capacidade: ", listaMemorias[tipo][3], "Gb</p></div>" );
-      write("<p>Preço: R$ ", listaMemorias[tipo][4], ",00</p></div>" );
-      write("<form class='Titulo'><input type='button' value='Fechar' onClick='window.close();'/></form>");
-      write("</body>");
-      write("</html>");
-      close();
-      }
+      function mostrarMemoria(index) {
+        let window = open("", listaMemorias[index][0], "width=300,height=450");    
+
+        with (window.document) {
+          write("<!DOCTYPE html>");
+          write("<html>");
+          write("<head><title>PakiMemo</title>");
+          write("<link rel='stylesheet' href='./styles.css' />");        
+          write("</head>");
+          write("<body>");
+          write("<div class='Titulo'><h2>Tipo " + listaMemorias[index][0] + "</h2></div>");
+          write("<div class='Titulo'><img src='Imagens/" + listaMemorias[index][1] + ".jpg' /></div>");
+          write("<div class='janInfoDetalhe'>");
+          write("<div><p>Fabricante: " + listaMemorias[index][2] + "</p>" );
+          write("<p>Capacidade: " + listaMemorias[index][3] + "Gb</p></div>" );
+          write("<p>Preço: R$ " + listaMemorias[index][4] + ",00</p></div>" );
+          write("<form class='Titulo'><input type='button' value='Fechar' onClick='window.close()'/></form>");
+          write("</body>");
+          write("</html>");
+
+          close();
+        }
       }
       </script>
   </body>

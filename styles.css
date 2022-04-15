@@ -60,7 +60,7 @@ nav ul {
 }
 .preco {
   color: #e00;
-  vertical-align: middle;
+  font-weight: bold;
 }
 .listMemo {
   font-family: "Rubik", Verdana, sans-serif;
@@ -125,6 +125,14 @@ th {
 .tabDisco .imgDisco {
   width: 70px;
   height: 70px;
+}
+.tabDisco .colMenu {
+  height: 45px;
+}
+.tabDisco a, a:visited {
+  color: #059;
+  cursor: pointer;
+  text-decoration: none;
 }
 .FormBox {
   width: 520px;
@@ -197,6 +205,18 @@ text-align: left;
 font-size: 18px;
 margin-left: 15px;
 }
-.center {
+#titDes {
+  height: 60px;
   text-align: center;
+}
+#prcDes {
+  height: 150px;
+}
+#imgDes {
+  width: 100px;
+  border: 2px solid #269;
+  padding: 12px;
+  background-color: #fff;
+  margin-left: 5px;
+  margin-right: 5px;
 }
