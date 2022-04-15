@@ -90,12 +90,12 @@
     <script>
       var listaDiscos = [
       ["", "vazio", "", "", 0],
-      ["Western Digital", "HD_Seagate_1Tb_70", "HD Sata III", "500 Gb", 170],
-      ["Seagate", "HD_WD_500gb_70", "HD Sata III", "1 Tb", 350],
-      ["Samdisk", "SSD_Samdisk_480Gb_70", "SSD Sata III", "480 Gb ", 380],
-      ["Kingston", "SSD_Kingston_960Gb_70", "SSD Sata III", "960 Gb", 700],
-      ["Kingston", "SSD_Kingston_M2_5000Gb_70", "SSD M2", "500 Gb", 410],
-      ["Western Digital", "SSD_WD_M2_240Gb_70", "SSD M2", "240 Gb", 270],      
+      ["Western Digital", "HD_Seagate_1Tb_70.jpg", "HD Sata III", "500 Gb", 170],
+      ["Seagate", "HD_WD_500gb_70.jpg", "HD Sata III", "1 Tb", 350],
+      ["Samdisk", "SSD_Samdisk_480Gb_70.jpg", "SSD Sata III", "480 Gb ", 380],
+      ["Kingston", "SSD_Kingston_960Gb_70.jpg", "SSD Sata III", "960 Gb", 700],
+      ["Kingston", "SSD_Kingston_M2_5000Gb_70.jpg", "SSD M2", "500 Gb", 410],
+      ["Western Digital", "SSD_WD_M2_240Gb_70.jpg", "SSD M2", "240 Gb", 270],      
     ];
 
       function mostrarDescricao(index) {
@@ -106,10 +106,10 @@
       var preco = document.getElementById("preco");
 
       tituloDescricao.innerHTML = "<h2>" + listaDiscos[index][0] + "</h2>";
-      foto.src = "Imagens/" + listaDiscos[index][1] + ".jpg";
-      interface.innerHTML = "Interface: " + listaDiscos[index][2];
-      capacidade.innerHTML = "Capacidade: " + listaDiscos[index][3];
-      preco.innerHTML = "Preço: R$ <strong class='preco'>" + listaDiscos[index][4] + ",00</strong>";
+      foto.src = "Imagens/" + listaDiscos[index][1];
+      interface.innerHTML = "<br/>Interface: " + listaDiscos[index][2] ;
+      capacidade.innerHTML = "<br/>Capacidade: " + listaDiscos[index][3];
+      preco.innerHTML = "<br/>Preço: R$ <strong class='preco'>" + listaDiscos[index][4] + ",00</strong>";
       }
       </script>
   </body>
