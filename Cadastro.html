@@ -79,11 +79,11 @@
           </div>
           <div class="ColEsq">
             <label>Telefone:</label>
-            <input type="tel" class="InpBoxMed" type="text" />
+            <input type="tel" class="InpBoxMed" type="text" onchange="verificarTelefone(this.value, 8, 'Telefone')" />
           </div>
           <div class="ColDir">
             <label>Celular:</label>
-            <input type="tel" class="InpBoxMed" type="text" />
+            <input type="tel" class="InpBoxMed" type="text" onchange="verificarTelefone(this.value, 9, 'Celular')" />
           </div>
           <fieldset class="FSColEsq">
             <legend>Nascimento:</legend>
@@ -113,5 +113,25 @@
         </div>
       </form>
     </section>
+
+    <script>
+      function verificarTelefone( value, size, name ) {
+        if ( value.length != size ) {
+          alert(name + " tem de ter " + size + " dígitos!");
+          return;
+        }
+
+        let valueArray = value.split("")
+        
+        valueArray.forEach(e => {
+          if ( (e < '0') || (e > '9') ) {
+            alert(name + " só pode ter dígitos, caracter " + e + " inválido!");
+            return false;
+          }
+        })
+
+      }
+      </script>
+
   </body>
 </html>

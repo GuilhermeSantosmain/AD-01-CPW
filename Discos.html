@@ -56,14 +56,12 @@
             <th rowspan="2" class="colTH">HD Sata III</th>
             <td class="colMenu"><a target="_self" href="javascript:mostrarDescricao(1)">Western Digital</a></td>             
             <td rowspan="6">
-              <div id="titDes">
-                <h2>&nbsp;</h2>
-              </div>
+              <h2 id="titDes"></h2>
               <img id="imgDes" src="Imagens/vazio.jpg" />
               <div id="prcDes">
-                <div id="interface">&nbsp;</div>
-                <div id="capacidade">&nbsp;</div>
-                <div id="preco">&nbsp;</div>
+                <div id="interface"></div>
+                <div id="capacidade"></div>
+                <div id="preco"></div>
               </div>
             </td>   
           </tr>
@@ -88,7 +86,7 @@
       </table>
     </section>
     <script>
-      var listaDiscos = [
+      let listaDiscos = [
       ["", "vazio", "", "", 0],
       ["Western Digital", "HD_Seagate_1Tb_70.jpg", "HD Sata III", "500 Gb", 170],
       ["Seagate", "HD_WD_500gb_70.jpg", "HD Sata III", "1 Tb", 350],
@@ -99,13 +97,13 @@
     ];
 
       function mostrarDescricao(index) {
-      var tituloDescricao = document.getElementById("titDes");
-      var foto = document.getElementById("imgDes");
-      var interface = document.getElementById("interface");
-      var capacidade = document.getElementById("capacidade");
-      var preco = document.getElementById("preco");
+      let tituloDescricao = document.getElementById("titDes");
+      let foto = document.getElementById("imgDes");
+      let interface = document.getElementById("interface");
+      let capacidade = document.getElementById("capacidade");
+      let preco = document.getElementById("preco");
 
-      tituloDescricao.innerHTML = "<h2>" + listaDiscos[index][0] + "</h2>";
+      tituloDescricao.innerHTML = listaDiscos[index][0];
       foto.src = "Imagens/" + listaDiscos[index][1];
       interface.innerHTML = "<br/>Interface: " + listaDiscos[index][2] ;
       capacidade.innerHTML = "<br/>Capacidade: " + listaDiscos[index][3];
