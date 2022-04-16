@@ -59,9 +59,9 @@
               <h2 id="titDes"></h2>
               <img id="imgDes" src="Imagens/vazio.jpg" />
               <div id="prcDes">
-                <div id="interface"></div>
-                <div id="capacidade"></div>
-                <div id="preco"></div>
+                <p id="interface"></p>
+                <p id="capacidade"></p>
+                <p id="preco"></p>
               </div>
             </td>   
           </tr>
@@ -103,11 +103,11 @@
       let capacidade = document.getElementById("capacidade");
       let preco = document.getElementById("preco");
 
-      tituloDescricao.innerHTML = listaDiscos[index][0];
+      tituloDescricao.innerHTML = "<br/>" + listaDiscos[index][0];
       foto.src = "Imagens/" + listaDiscos[index][1];
-      interface.innerHTML = "<br/>Interface: " + listaDiscos[index][2] ;
-      capacidade.innerHTML = "<br/>Capacidade: " + listaDiscos[index][3];
-      preco.innerHTML = "<br/>Preço: R$ <strong class='preco'>" + listaDiscos[index][4] + ",00</strong>";
+      interface.innerHTML = "Interface: " + listaDiscos[index][2] ;
+      capacidade.innerHTML = "Capacidade: " + listaDiscos[index][3];
+      preco.innerHTML = "Preço: R$ <strong class='preco'>" + listaDiscos[index][4] + ",00</strong>";
       }
       </script>
   </body>
