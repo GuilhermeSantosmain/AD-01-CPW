@@ -208,10 +208,9 @@
           let lisPedArea = document.getElementById("lisPedArea");
           let vlrTotal = document.getElementById("vlrTotal");
 
-          let listaPedidos = lisPedArea.value.length > 0 ? lisPedArea.value + "\n" : "";
           let total = vlrTotal.value > 0 ? parseInt(vlrTotal.value) : 0;
          
-          lisPedArea.value = listaPedidos + novaDescricao;
+          lisPedArea.value = lisPedArea.value + novaDescricao + "\n";
           vlrTotal.value = total + parseInt(preco);
           selProduto.selectedIndex = 0;
 
