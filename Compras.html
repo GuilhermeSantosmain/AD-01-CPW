@@ -107,7 +107,7 @@
             <input class="InpBoxMed" type="password" />
           </div>
           <div id="lisSelProd" class="ColEsq">
-            <i>Se você ainda não tem cadastro clique<a href="./Cadastro.html">aqui</a>!</i>
+            <i>Se você ainda não tem cadastro clique <a href="./Cadastro.html">aqui</a>!</i>
           </div>
         </fieldset>
         <fieldset class="FSLinhaInteira">
@@ -115,45 +115,45 @@
           <div id="lisSelProd" class="ColEsq">
             <label class="LabBox">Produtos:</label>
             <select id="selProduto" class="InpBoxGnd">
-              <option>-----</option>
+              <option value="0">-----</option>
               <optgroup label="Memória DDR3">
-                <option>Kingston 4Gb</option>
+                <option value="200">Kingston 4Gb</option>
 
-                <option>Samsung 8Gb</option>
+                <option value="190">Samsung 8Gb</option>
               </optgroup>
 
               <optgroup label="Memória DDR4">
-                <option>Kingston Fury 8Gb</option>
+                <option value="298">Kingston Fury 8Gb</option>
 
-                <option>Carsair Vengeance 8GB</option>
+                <option value="248">Corsair Vengeance 8GB</option>
               </optgroup>
 
-              <optgroup label="HD Sata |||">
-                <option>Wester Digital 500Gb</option>
+              <optgroup label="HD Sata III">
+                <option value="170">Western Digital 500Gb</option>
 
-                <option>Seagate 1Tb</option>
+                <option value="350">Seagate 1Tb</option>
               </optgroup>
 
-              <optgroup label="SSD Sata |||">
-                <option>Samdisk 480Gb</option>
+              <optgroup label="SSD Sata III">
+                <option value="380">Samdisk 480Gb</option>
 
-                <option>Kingston 960Gb</option>
+                <option value="700">Kingston 960Gb</option>
               </optgroup>
 
               <optgroup label="SSD M2">
-                <option>Kingston 500Gb</option>
+                <option value="410">Kingston 500Gb</option>
 
-                <option>Samsung 240Gb</option>
+                <option value="270">Samsung 240Gb</option>
               </optgroup>
             </select>
           </div>
-          <button id="btnIncluir" class="ColDir">Incluir</button>
+          <input onclick="incluir()" type="button" value="Incluir" id="btnIncluir" class="ColDir" />
           <div id="boxPedidos" class="LinhaForm">
-            <textarea id="lisPedArea" class="InpBoxGnd"></textarea>
+            <textarea readonly id="lisPedArea" class="InpBoxGnd"></textarea>
           </div>
           <div id="boxValor" class="ColDir">
             <label>Valor: R$</label>
-            <input class="InpBoxMed" type="number" />
+            <input readonly id="vlrTotal" class="InpBoxMed" type="number" value="0" />
           </div>
         </fieldset>
         <fieldset class="FSLinhaInteira">
@@ -189,10 +189,36 @@
           </fieldset>
         </fieldset>
         <div class="botoes">
-          <button>Cadastrar</button>
+          <button>Confirmar</button>
           <button>Limpar</button>
         </div>
       </form>
     </section>
+    <script>
+      function incluir() {        
+        let selProduto = document.getElementById("selProduto");
+        let indexProd = selProduto.selectedIndex;
+
+        if (indexProd != 0) {
+          let option = selProduto.options[indexProd];
+          let optGroup = option.parentNode.label;
+          let novaDescricao = optGroup + " " + option.text;
+          let preco = selProduto.value;
+
+          let lisPedArea = document.getElementById("lisPedArea");
+          let vlrTotal = document.getElementById("vlrTotal");
+
+          let listaPedidos = lisPedArea.value.length > 0 ? lisPedArea.value + "\n" : "";
+          let total = vlrTotal.value > 0 ? parseInt(vlrTotal.value) : 0;
+         
+          lisPedArea.value = listaPedidos + novaDescricao;
+          vlrTotal.value = total + parseInt(preco);
+          selProduto.selectedIndex = 0;
+
+        } else {
+          alert("Nenhum Produto selecionado!");
+        }
+      }
+    </script>
   </body>
 </html>

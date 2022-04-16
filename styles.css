@@ -22,11 +22,11 @@ section {
   width: 70%;
   float: right;
 }
-nav a, address a {
+nav a, address a, i a {
   text-decoration: none;
   color: #ff2;
 }
-nav a:visited {
+nav a:visited, address a:visited, i a:visited {
   text-decoration: none;
   color: #dd2;
 }
