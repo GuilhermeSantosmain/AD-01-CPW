@@ -210,9 +210,10 @@ margin-left: 15px;
   text-align: center;
 }
 #prcDes {
-  height: 150px;
+  height: 100px;
 }
 #imgDes {
+  height: 100px;
   width: 100px;
   border: 2px solid #269;
   padding: 12px;

@@ -189,7 +189,7 @@
           </fieldset>
         </fieldset>
         <div class="botoes">
-          <button>Confirmar</button>
+          <input onclick="confirmarCompra()" type="button" value="Confirmar" id="btnComprar"  class="ColDir" />
           <button>Limpar</button>
         </div>
       </form>
@@ -217,6 +217,11 @@
         } else {
           alert("Nenhum Produto selecionado!");
         }
+      }
+      
+      function confirmarCompra() {        
+        let vlrTotal = document.getElementById("vlrTotal");
+        vlrTotal.value == 0 ? alert("Nenhum Produto selecionado!") : location.reload()
       }
     </script>
   </body>
